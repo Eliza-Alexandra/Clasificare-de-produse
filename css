@@ -1,0 +1,63 @@
+body {
+    text-align: center;
+    margin-top: 180px;
+    background-color: rosybrown; 
+    font-family: verdana;
+    font-size: 150%;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+h1 {
+    color: black;
+    margin: 40px;
+}
+  
+p {
+    font-family: verdana;
+    font-size: 30px;
+    margin: 40px;
+    color: brown;
+    border-style: double;
+    border-width: 5px;
+    background-color: whitesmoke;
+    transition: all 0.3s ease;
+}
+
+form {
+    padding: 30px;
+    background-image: linear-gradient(rosybrown, rgb(167, 97, 97), rosybrown);
+}
+
+input {
+    margin: 30px;
+}
+
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border: none;
+    cursor: pointer;
+    animation-name: animation;
+    animation-duration: 10s;
+    animation-direction: alternate;
+}
+
+#result {
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+#result.changed {
+    color: #2c1e1e;  
+    font-weight: bold;
+}
+
+@keyframes animation {
+    0%   {background-color: greenyellow;}
+    20%  {background-color: rgb(188, 188, 42);}
+    40%  {background-color: goldenrod;}
+    60%  {background-color: rgb(134, 153, 11);}
+    80%  {background-color: rgb(85, 167, 34);}
+    100% {background-color: green;}
+}
