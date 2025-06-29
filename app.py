@@ -3,7 +3,7 @@ import numpy as np
 import tensorflow as tf
 from flask import Flask, request, jsonify, render_template
 from tensorflow.keras.models import load_model
-from tensorflow.keras.applications.vgg16 import preprocess_input
+from tensorflow.keras.applications.resnet50 import preprocess_input
 
 app = Flask(__name__)
 
