@@ -26,7 +26,7 @@ val_test_dataset = tf.keras.preprocessing.image_dataset_from_directory(
     batch_size=64
 )
 
-total_batches = tf.data.experimental.cardinality(val_test_dataset).numpy() # nr batch-uri in integer py
+total_batches = tf.data.experimental.cardinality(val_test_dataset).numpy() #nr batch-uri in integer py
 
 val_batches = int(total_batches * 2 / 3)
 test_batches = total_batches - val_batches
