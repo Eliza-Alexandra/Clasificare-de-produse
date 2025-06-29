@@ -72,7 +72,7 @@ for layer in base_model.layers[-30:]:
     layer.trainable = True
 
 from tensorflow.keras.layers import Dropout, Dense, GlobalAveragePooling2D, BatchNormalization
-from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau, ModelCheckpoint
+from tensorflow.keras.callbacks import ModelCheckpoint
 from tensorflow.keras.regularizers import l2
 
 v16_model = Sequential([ #construire model strat cu strat
