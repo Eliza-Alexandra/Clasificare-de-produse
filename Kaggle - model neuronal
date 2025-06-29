@@ -94,20 +94,6 @@ checkpoint = ModelCheckpoint(
     verbose=1
 )
 
-early_stop = EarlyStopping(
-    monitor='val_loss',
-    patience=5,
-    restore_best_weights=True,
-    verbose=1
-)
-
-reduce_lr = ReduceLROnPlateau(
-    monitor='val_loss',
-    factor=0.5,
-    patience=3,
-    verbose=1
-)
-
 if os.path.exists("model_checkpoint.keras"):
     print("Se incarca modelul salvat...")
     v16_model = tf.keras.models.load_model("model_checkpoint.keras")
@@ -118,7 +104,7 @@ history = v16_model.fit(
     train_dataset,
     epochs=60,
     validation_data=val_dataset,
-    callbacks=[checkpoint, reduce_lr, early_stop]
+    callbacks=[checkpoint]
 )
 
 loss, accuracy = v16_model.evaluate(test_dataset)
